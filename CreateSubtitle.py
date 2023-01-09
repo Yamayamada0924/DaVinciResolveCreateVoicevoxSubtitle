@@ -38,13 +38,13 @@ text_plus_center = [0.5, 0.0715] # Text+字幕の位置
 # srtファイルに出力するテキスト内容の調整
 # original_text VOICEVOXで出力されたテキスト
 # 戻り値 srt に出力するテキスト
-def AdjustSubitleText( original_text )
+def AdjustSubitleText( original_text ):
     return original_text
 
 # xmlファイルとText+に出力するテキスト内容の調整
 # original_text VOICEVOXで出力されたテキスト
 # 戻り値 xmlファイルとText+に出力するテキスト
-def AdjustTitleText( original_text )
+def AdjustTitleText( original_text ):
     return original_text.replace('、', ' ').replace('。', '').strip()
 
 
