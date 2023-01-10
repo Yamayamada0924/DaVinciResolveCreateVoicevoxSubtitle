@@ -32,8 +32,8 @@ CreateSubtitle.bat C:\～～～～～～～（VOICEVOXのテキストファイ�
 字幕用のテキストクリップが配置されたタイムラインとなっているので、テキストクリップを全選択してからコピー&ペーストして使うことをお勧めします  
 またテキストクリップの設定をまとめて変える際は、テキストクリップを全選択して変更すると便利です  
 
-## ライセンス表記
-動画で字幕を使用した際には何も表記する必要はありませんが、作者Twitterをフォローしてもらえると喜びます。  
+## ライセンス表記について
+スクリプトから作成した字幕を使用する際には何も表記する必要はありませんが、作者Twitterをフォローしてもらえると喜びます。  
 https://twitter.com/yamayamadagames  
 https://twitter.com/yamayamada0_0  
 
@@ -46,10 +46,11 @@ https://twitter.com/yamayamada0_0
 | CreateSubtitle.bat | Windowsで簡単にスクリプトを使うためのbatです、使わなくても大丈夫です |
 
 ## 詳細な使い方
-`CreateSubtitle.py` の冒頭を編集することで色々と変更が可能です
-| 変数名 | 説明 |
+設定ファイル `settings.py` を編集することで色々と設定の変更が可能です  
+
+| 設定名 | 説明 |
 | --- | --- |
-| invalid_title | 字幕の文字が分からなかった場合に表示される文字 |
+| invalid_title | オーディオトラックのクリップに対してどの文字か判別できなかった際に使用される文字列 |
 | audio_track_number | オーディオトラックの番号指定<br>一番上のオーディオトラックが1<br>VOICEVOXから書き出される.wavファイルの名前を変更することなく、このオーディオトラックに配置している必要があります |
 | audio_track_continuous_time | この秒数しか.wav同士に隙間がない場合、隙間も字幕を表示する |
 | frame_rate | Timelineのフレームレート(30以外未テスト) |
@@ -68,6 +69,8 @@ https://twitter.com/yamayamada0_0
 | text_plus_style | Text+字幕のスタイル |
 | text_plus_size | Text+字幕のサイズ、こちらは数値で渡す |
 | text_plus_center | Text+字幕の位置 |
+
+フックファイル `hooks.py` を編集することで、VOICEVOXのテキストそのままではなく、編集したテキストを字幕にすることができます
 
 | 関数名 | 説明 |
 | --- | --- |
